@@ -32,9 +32,9 @@ describe("About Arrays", function() {
   it("should understand array length", function () {
     var fourNumberArray = [1, 2, 3, 4];
 
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
+    expect(fourNumberArray.length).toBe(4);
     fourNumberArray.push(5, 6);
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
+    expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10);
     expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
