@@ -3,7 +3,7 @@ describe("About Arrays", function() {
   //We shall contemplate truth by testing reality, via spec expectations.
   it("should create arrays", function() {
     var emptyArray = [];
-    expect(typeof(emptyArray)).toBe([]); //A mistake? - http://javascript.crockford.com/remedial.html
+    expect(typeof(emptyArray)).toBe("true"); //A mistake? - http://javascript.crockford.com/remedial.html
     expect(emptyArray.length).toBe(0);
 
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
@@ -23,10 +23,10 @@ describe("About Arrays", function() {
     expect(array).toEqual([1]);
 
     array[1] = 2;
-    expect(array).toEqual([1, FILL_ME_IN]);
+    expect(array).toEqual([1, 2]);
 
     array.push(3);
-    expect(array).toEqual(FILL_ME_IN);
+    expect(array).toEqual([1, 2, 3]);
   });
 
   it("should understand array length", function () {
@@ -37,16 +37,16 @@ describe("About Arrays", function() {
     expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10);
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+    expect(tenEmptyElementArray.length).toBe(10);
 
     tenEmptyElementArray.length = 5;
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+    expect(tenEmptyElementArray.length).toBe(5);
   });
 
   it("should slice arrays", function () {
     var array = ["peanut", "butter", "and", "jelly"];
 
-    expect(array.slice(0, 1)).toEqual(FILL_ME_IN);
+    expect(array.slice(0, 1)).toEqual(["peanut"]);
     expect(array.slice(0, 2)).toEqual(FILL_ME_IN);
     expect(array.slice(2, 2)).toEqual(FILL_ME_IN);
     expect(array.slice(2, 20)).toEqual(FILL_ME_IN);
